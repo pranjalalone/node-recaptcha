@@ -1,0 +1,26 @@
+{
+  "name": "node-recaptcha",
+  "version": "1.0.0",
+  "description": "A simple application showing use of google recaptcha with nodejs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "google-recaptcha"
+  ],
+  "author": "Pranjal Alone",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Google recaptcha Verification</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style media="screen">
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        width: 60%;
+        margin: 0 auto;
+      }
+      form {
+        width: 100%;
+        margin: 0 auto;
+      }
+      input, button {
+        height: 40px;
+        width: 100%;
+        display: block;
+        font-size: 16px;
+        margin: 10px 0;
+        padding: 5px;
+      }
+      .g-recaptcha div {
+        width: 100% !important;
+      }
+      .g-recaptcha div iframe {
+        width: 100% !important;
+      }
+      .rc-anchor-normal {
+        width: auto !important;
+      }
+      @media (max-width: 768px) {
+        .container {
+          width: 95%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="/submit" method="POST">
+        <h1>Form</h1>
+        <input type="text" name="name" placeholder="Enter your name" required=true />
+        <div class="g-recaptcha" data-theme="dark" data-sitekey="6Ld48cwZAAAAAFKXRoFEjxm4uWa4xDN8I77HeVkN"></div>
+        <button type="submit">Submit</button>
+      </form>
+      <% if (typeof(error) !== "undefined") { %>
+        <%= error %>
+      <% } %>
+    </div>
+  </body>
+  <!-- Javascript -->
+  <!-- <script src="https://www.google.com/recaptcha/api.js?render=6Ld48cwZAAAAAFKXRoFEjxm4uWa4xDN8I77HeVkN"></script> -->
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+  
+  <script type="text/javascript">
+    const GOOGLE_RECAPTCHA_CLIENT = '6Ld48cwZAAAAAFKXRoFEjxm4uWa4xDN8I77HeVkN';
+  </script>
+</html>
